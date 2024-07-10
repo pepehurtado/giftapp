@@ -14,4 +14,12 @@ export class SidebarComponent {
     return this.giftservice.tagsHistory;
   }
 
+  searchTag(tag: string): void {
+    this.giftservice.searchTag(tag);
+  }
+
+  loadFavorites(): void {
+    this.giftservice.loadFavorites();
+  }
+
 }

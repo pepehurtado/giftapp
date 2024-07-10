@@ -1,0 +1,41 @@
+/* Estilos para el botón principal */
+.card-button {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card-button:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para el botón de favoritos */
+.favorite-button {
+  background: rgb(101, 121, 115);
+  border: none;
+  color: rgb(25, 0, 255);
+  position: relative;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+
+.favorite-button:hover {
+
+  color: yellow;
+}
+
+/* Estilos para los iconos de favoritos */
+.fa-heart {
+  color: red;
+}
+
+.fa-heart-o {
+  color: white;
+}

@@ -1,16 +1,26 @@
-<div class="bg-dark border-rigth p-3" id="sidebar">
-<h3 class="text-light">GifsApp</h3>
+<div class="bg-dark border-rigth p-3 " id="sidebar">
+<h3 class="text-light ">GifsApp</h3>
 <hr class="text-light">
 
 
 <div class="list-group list-reset">
 
-<button *ngFor="let tag of tags" class="list-group-item list-group-item-action">
-  {{tag | titlecase}}
+<button
+*ngFor="let tag of tags"
+(click)="searchTag(tag)"
+class="list-group-item list-group-item-action">
+{{tag | titlecase}}
 </button>
 
 </div>
 
+<hr class="text-light">
+<div class="d-flex justify-content-center">
+<button
+(click)="loadFavorites()"
+class="btn btn-outline-light">
+Favorites</button>
+</div>
 
 
 </div>

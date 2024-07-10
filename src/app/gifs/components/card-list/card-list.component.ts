@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Gif } from '../../interfaces/gifs.interfaces';
+import { GifsService } from '../../services/gifs.service';
 
 @Component({
   selector: 'gifs-card-list',
@@ -8,9 +9,17 @@ import { Gif } from '../../interfaces/gifs.interfaces';
 })
 export class CardListComponent {
 
-  constructor() { }
+  constructor(public gifService : GifsService) { }
 
 
   @Input()
   public gifs: Gif[] = [];
+
+  loadNextPage(): void {
+    this.gifService.loadNextPage();
+  }
+
+  loadPreviousPage(): void {
+    this.gifService.loadPreviousPage();
+  }
 }

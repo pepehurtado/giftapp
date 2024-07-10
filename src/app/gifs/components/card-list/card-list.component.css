@@ -1,0 +1,11 @@
+.row.justify-content-center {
+  justify-content: center;
+}
+
+.col-auto {
+  padding: 0 10px;
+}
+
+button.btn-primary {
+  min-width: 120px;
+}

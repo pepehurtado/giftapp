@@ -1,0 +1,17 @@
+<div class="card text-center mb-2 bg-dark">
+  <button class="card-button bg-dark" (click)="openUrl(gif.url)">
+    <shared-lazy-image
+      [url]="gif.images.downsized_medium.url"
+      [alt]="gif.title || 'No name'">
+    </shared-lazy-image>
+    <div *ngIf="gif.title" class="card-body text-white">
+      <p class="card-text">{{ gif.title }}</p>
+      <button class="btn btn-outline-light favorite-button" (click)="toggleFavorite(gif); $event.stopPropagation()">
+        <i class="fa" [ngClass]="{'fa-heart': containsFavorite(gif), 'fa-heart-o': !containsFavorite(gif)}">
+          <p *ngIf="containsFavorite(gif)">Eliminar de favoritos</p>
+          <p *ngIf="!containsFavorite(gif)">Agregar a favoritos</p>
+        </i>
+      </button>
+    </div>
+  </button>
+</div>
